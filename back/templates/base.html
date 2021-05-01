@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Procedure Result</title>
+    <style>
+        .column {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+        }
+        
+        .row {
+            display: flex;
+        }
+    </style>
+</head> 
+
+<body>
+    <div class="row">
+
+        <div class="column left">
+            <p> {{ procedures|safe }} </p>
+        </div>
+
+        <div class="column right">
+            <form method="post">
+                <label for="procedure">Procedure:</label><br>
+                <input type="text" name="procedure" placeholder="get_brigade_workers_younger_than" size="30"><br>
+                <label for="params">Parameters:</label><br>
+                <input type="text" name="params" placeholder="e.g., 2,80 " size="30"><br>
+                <input type="submit" value="Send Query">
+            </form>
+            
+        </div>
+
+    </div>
+
+</body>
+</html>
